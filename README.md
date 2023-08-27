@@ -9,17 +9,19 @@ Welcome to the API Web Shop project! This is a simplified mini web shop implemen
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/api-web-shop.git
+git clone https://github.com/hareshnarola101/loop
 ```
 
 1. Navigate to the project directory:
 
 ```bash
-cd api-web-shop
+cd loop
 ```
 
 1. Install the required dependencies:
+``````bash
 composer install
+``````
 
 Usage
 1. Configure your database settings in the .env file:
