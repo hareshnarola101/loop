@@ -64,8 +64,9 @@ The following endpoints are available for managing orders:
 
 <li>POST http://127.0.0.1:8000/api/orders: Create a new order.</li>
 
-```json
 Request Body:
+
+```json
 {
     "customer_id": 5,
     "product_ids": [ 1, 2 ]
@@ -76,23 +77,25 @@ Request Body:
 
 <li>PUT http://127.0.0.1:8000/api/orders/{id}: Update an order.</li>
 
-```json
 Request Body:
+
+```json
 {
     "customer_id":5,
     "product_ids":[ 56, 60]
 }
 ```
 
-<li>DELETE /api/orders/{id}: Delete an order.</li>
+<li>DELETE http://127.0.0.1:8000/api/orders/{id}: Delete an order.</li>
 
 <h3>Add Product to Order Endpoint</h3>
 To attach a product to an existing order, use the following endpoint:
 
-<li>POST /api/orders/{id}/add</li>
+<li>POST http://127.0.0.1:8000/api/orders/{id}/add</li>
+
+Request Body:
 
 ```json
-Request Body:
 {
     "product_id": 55
 }
@@ -102,7 +105,7 @@ Request Body:
 <h3>Pay Order Endpoint</h3>
 To pay for an order, use the following endpoint:
 
-<li>POST /api/orders/{id}/pay</li>
+<li>POST http://127.0.0.1:8000/api/orders/{id}/pay</li>
 Request Body:
 
 ```json
@@ -136,3 +139,33 @@ This project is licensed under the MIT License.
 
 <h2>Note:</h2>
 <b>Here in root folder I have attached exported db file of database and json file of postmen collection</b>
+
+<h2>Estimated and tracked time</h2>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Estimated Time</th>
+    <th>Tracked Time</th>
+  </tr>
+  <tr>
+    <td>Import master data</td>
+    <td>45 minute</td>
+    <td>33 minute</td>
+  </tr>
+  <tr>
+    <td>Expose Order Data as REST Service</td>
+    <td>1hour 30minute</td>
+    <td>1hour 15min</td>
+  </tr>
+  <tr>
+    <td>Create Add-Product-to-Order Endpoint</td>
+    <td>40 minutes</td>
+    <td>34 minutes</td>
+  </tr>
+  <tr>
+    <td>Create Pay Order Endpoint</td>
+    <td>45 minutes</td>
+    <td>29 minytes</td>
+  </tr>
+</table>
