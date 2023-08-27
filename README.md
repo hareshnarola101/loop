@@ -10,6 +10,7 @@ Welcome to the API Web Shop project! This is a simplified mini web shop implemen
 
 ```bash
 git clone https://github.com/your-username/api-web-shop.git
+```bash
 
 1. Navigate to the project directory:
 cd api-web-shop
