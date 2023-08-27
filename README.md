@@ -36,35 +36,40 @@ DB_PASSWORD=
 ```
 
 1. Run migrations to set up the database:
+```bash 
 php artisan migrate
+```
 
 1. Run the development server:
+```bash 
 php artisan serve
-
+```
 
 Now you can access the API at http://127.0.0.1:8000.
 
 
-Importing Master Data
+<h3>Importing Master Data</h3>
 To import master data from CSV files, use the following Artisan command:
-
-
+```bash
 php artisan import:data
+```
 
 This command imports customer and product data from provided URLs into the database. The import results will be logged.
 
 
-Order API
+<h3>Order API</h3>
 The following endpoints are available for managing orders:
+<ul>
+<li>GET /api/orders: Get a list of all orders.</li>
 
-GET /api/orders: Get a list of all orders.
-
-POST /api/orders: Create a new order.
+<li>POST /api/orders: Create a new order.</li>
+```json
 Request Body:
 {
     "customer_id": 5,
     "product_ids": [ 1, 2 ]
 }
+```
 
 GET /api/orders/{id}: Get details of a specific order.
 
