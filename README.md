@@ -26,12 +26,14 @@ composer install
 Usage
 1. Configure your database settings in the .env file:
 
+```makefile
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=api_webshop
+DB_DATABASE=loop
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
 1. Run migrations to set up the database:
 php artisan migrate
