@@ -59,10 +59,11 @@ This command imports customer and product data from provided URLs into the datab
 
 <h3>Order API</h3>
 The following endpoints are available for managing orders:
-<ul>
-<li>GET /api/orders: Get a list of all orders.</li>
 
-<li>POST /api/orders: Create a new order.</li>
+<li>GET http://127.0.0.1:8000/api/orders: Get a list of all orders.</li>
+
+<li>POST http://127.0.0.1:8000/api/orders: Create a new order.</li>
+
 ```json
 Request Body:
 {
@@ -71,55 +72,67 @@ Request Body:
 }
 ```
 
-GET /api/orders/{id}: Get details of a specific order.
+<li>GET http://127.0.0.1:8000/api/orders/{id}: Get details of a specific order.</li>
 
-PUT /api/orders/{id}: Update an order.
+<li>PUT http://127.0.0.1:8000/api/orders/{id}: Update an order.</li>
+
+```json
 Request Body:
 {
     "customer_id":5,
     "product_ids":[ 56, 60]
 }
+```
 
-DELETE /api/orders/{id}: Delete an order.
+<li>DELETE /api/orders/{id}: Delete an order.</li>
 
-Add Product to Order Endpoint
+<h3>Add Product to Order Endpoint</h3>
 To attach a product to an existing order, use the following endpoint:
 
-POST /api/orders/{id}/add
+<li>POST /api/orders/{id}/add</li>
 
+```json
 Request Body:
 {
     "product_id": 55
 }
+```
 
 
-Pay Order Endpoint
+<h3>Pay Order Endpoint</h3>
 To pay for an order, use the following endpoint:
 
-POST /api/orders/{id}/pay
+<li>POST /api/orders/{id}/pay</li>
 Request Body:
 
+```json
 {
     "order_id": 23,
     "customer_email": "user@email.com",
     "value": 33.4
 }
-
+```
 
 Payment Response Success:
 
+```json
 {
     "message": "Payment Successful"
 }
+```
 
 Payment Response Failed:
-
+```json
 {
     "message": "Insufficient Funds"
 }
+```
 
-Contributing
+<h3>Contributing</h3>
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-License
+<h3>License</h3>
 This project is licensed under the MIT License.
+
+<h2>Note:</h2>
+<b>Here in root folder I have attached exported db file of database and json file of postmen collection</b>
